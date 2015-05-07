@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name : bang
+# key : bang
+# --
+# -*- coding: utf-8 -*-
+
+$0
+
+# Local variables:
+# coding: utf-8
+# mode: python
+# End:
+# vim: fileencoding=utf-8 filetype=python :

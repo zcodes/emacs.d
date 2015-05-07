@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: home
+# key: home
+# --
+[[file:../index.org][{Back to Home}]]

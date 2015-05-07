@@ -10,9 +10,9 @@
 ;;    3. https://github.com/tumashu/chinese-fonts-setup
 ;;    4. http://coldnew.github.io/blog/2013/11/16_d2f3a.html
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(set-frame-font "Ubuntu Mono 12")
+(set-frame-font "Anonymous Pro 11")
 (set-fontset-font t 'han
-		  (font-spec :family "Source Han Sans"
-			     :size 16))
+		  (font-spec :family "Source Han Sans SC Normal"
+			     :size 12.0))
 
 (provide 'zcodes-fonts)

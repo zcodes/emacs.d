@@ -1,0 +1,11 @@
+# name: method
+# key: meth
+# --
+
+/**
+ *
+ */
+public function $1($2)
+{
+    $3
+}

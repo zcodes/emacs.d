@@ -1,0 +1,17 @@
+# -*- mode: snippet -*-
+# name: zcodesjs
+# key: zcodesjs
+# --
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8"/>
+    <title>JavaScript Tests</title>
+    <script type="text/javascript">
+    </script>
+  </head>
+  <body>
+  
+  </body>
+</html>
+

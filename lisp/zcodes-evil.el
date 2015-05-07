@@ -12,6 +12,8 @@
 
 ;; leader key binding
 (evil-leader/set-key
- "be" 'zcodes/ibuffer)
+  "be" 'zcodes/ibuffer
+  "f"  'ido-find-file)
+
 
 (provide 'zcodes-evil)

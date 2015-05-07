@@ -32,6 +32,7 @@
 (require 'zcodes-ibuffer)
 (require 'zcodes-dired)
 (require 'zcodes-speedbar)
+(require 'zcodes-yasnippet)
 
 ;; 编程语言支持
 (require 'zcodes-php)
@@ -39,6 +40,8 @@
 (require 'zcodes-markdown)
 (require 'zcodes-org)
 (require 'zcodes-web)
+(require 'zcodes-css)
+(require 'zcodes-yaml)
 
 ;; vim 模拟
 (require 'zcodes-evil)

@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: zcodes
+# key: zcodes
+# --
+#+title: $1
+#+STARTUP: hidestars
+#+OPTIONS: -:nil *:nil ':nil ^:nil toc:nil
+#+BEGIN_HTML
+---
+layout: notes
+title: $1
+---
+#+END_HTML
+#+TOC: headlines 4
