@@ -10,7 +10,8 @@
 ;;    3. https://github.com/tumashu/chinese-fonts-setup
 ;;    4. http://coldnew.github.io/blog/2013/11/16_d2f3a.html
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(set-frame-font "Anonymous Pro 11")
+;; (set-frame-font "Anonymous Pro 11")
+(set-frame-font "Source Code Pro 10")
 (set-fontset-font t 'han
 		  (font-spec :family "Source Han Sans SC Normal"
 			     :size 12.0))

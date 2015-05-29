@@ -1,16 +1,15 @@
 ;;; 
 ;; 
-;; ███████╗███╗   ███╗ █████╗  ██████╗███████╗
-;; ██╔════╝████╗ ████║██╔══██╗██╔════╝██╔════╝
-;; █████╗  ██╔████╔██║███████║██║     ███████╗
-;; ██╔══╝  ██║╚██╔╝██║██╔══██║██║     ╚════██║
-;; ███████╗██║ ╚═╝ ██║██║  ██║╚██████╗███████║
-;; ╚══════╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚══════╝
-;;
-;; 
 ;; Emacs配置参考:
 ;; 1. https://github.com/purcell/emacs.d.git
 ;; 2. https://github.com/bbatsov/prelude.git
+
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
 
 (when (version<= emacs-version "24")
   (error "Emacs版本太低,该配置需要Emacs 24.3或是更高版本"))

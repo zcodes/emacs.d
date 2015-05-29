@@ -8,6 +8,7 @@
 ;; 编辑快捷键设置
 (global-set-key (kbd "C-.") 'set-mark-command)
 (global-set-key (kbd "C-x j") 'join-line)
+(global-set-key (kbd "<f5>") 'revert-buffer)
 
 ;; 启用ido
 (ido-mode t)

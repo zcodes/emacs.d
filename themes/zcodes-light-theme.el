@@ -34,11 +34,11 @@
 
 (custom-theme-set-faces
  'zcodes-light
- '(default ((t (:background "#FFFFFF" :foreground "#000000" :weight normal))))
+ '(default ((t (:background "#F7FAFF" :foreground "#000000" :weight normal))))
  '(column ((t (:height 1.2))))
  '(cursor ((t (:background "#7C7C7C"))))
- '(fringe ((t (:background "#FFFFFF"))))
- '(linum ((t (:background "#FFFFFF" :foreground "#B6B6B6"))))
+ '(fringe ((t (:background "#F7FAFF"))))
+ '(linum ((t (:background "#F7FAFF" :foreground "#B6B6B6"))))
  
  '(mode-line ((t (:background "#DCDCDC" :foreground "#5D5D5D"))))
  '(mode-line-inactive ((t (:background "#EFEFEF" :foreground "#5D5D5D"))))
