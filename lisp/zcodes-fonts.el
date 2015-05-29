@@ -11,9 +11,16 @@
 ;;    4. http://coldnew.github.io/blog/2013/11/16_d2f3a.html
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; (set-frame-font "Anonymous Pro 11")
-(set-frame-font "Source Code Pro 10")
-(set-fontset-font t 'han
-		  (font-spec :family "Source Han Sans SC Normal"
-			     :size 12.0))
+(if (eq window-system 'w32)
+    (progn
+      (set-frame-font "Courier New 10")
+      (set-fontset-font t 'han
+			(font-spec :family "宋体"
+				   :size 16)))
+  (progn
+    (set-frame-font "Source Code Pro 10")
+    (set-fontset-font t 'han
+		      (font-spec :family "Source Han Sans SC Normal"
+				 :size 12.0))))
 
 (provide 'zcodes-fonts)
