@@ -1,7 +1,11 @@
 (require-package 'less-css-mode)
 
-;; this package is not avaliable via elpa.
-;;(require-package 'rainbow-mode)
+;; Contacting host: elpa.gnu.org:80 [2 times]
+;; Failed to download `gnu' archive.
+;;
+;; Windows 下因没有gpg的问题，只能设置`package-check-signature'为nil解
+;; 决。
+(require-package 'rainbow-mode)
 
 (add-hook 'css-mode-hook 'rainbow-mode)
 (add-hook 'web-mode-hook 'rainbow-mode)

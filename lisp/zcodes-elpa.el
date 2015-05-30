@@ -20,7 +20,11 @@
 
 ;; 从24.4开始,Emacs是用签名来验证包的安全性, 但是一般第三方的包不支持
 ;; gpg签名, 所以默认情况下会出现无法安装的问题.
-(setq package-check-signature 'allow-unsigned)
+;;
+;; windows下没有gpg, 导致安装失败，直接设置为不检查
+(if (eq window-system 'w32)
+    (setq package-check-signature nil)
+  (setq package-check-signature 'allow-unsigned))
 
 ;; 不同的仓库有同名不同版本的包,可以使用变量`package-pinned-packages'
 ;; 来指定某个包的仓库

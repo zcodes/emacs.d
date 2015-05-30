@@ -44,3 +44,9 @@
 
 ;; vim 模拟
 (require 'zcodes-evil)
+
+
+;; Emacs Customizations
+(setq custom-file "~/.emacs-custom.el")
+(if (file-exists-p custom-file)
+    (load custom-file))
