@@ -33,4 +33,7 @@
       mouse-wheel-progressive-speed nil
       mouse-wheel-follow-mouse 't)
 
+;; turn on automatic bracket insertion by pairs.
+(electric-pair-mode 1)
+
 (provide 'zcodes-edit)
