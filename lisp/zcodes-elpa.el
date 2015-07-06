@@ -34,9 +34,14 @@
 
 
 ;; 安装包
-(defun require-package (package)
-  (unless (package-installed-p package)
-    (package-install package)))
+(defun require-package (package &optional min-version no-refresh)
+  (if (package-installed-p package min-version)
+      t
+    (if (or (assoc package package-archive-contents) no-refresh)
+	(package-install package)
+      (progn
+	(package-refresh-contents)
+	(require-package package min-version t)))))
 
 (defun require-packages (packages)
   (mapc #'require-package packages))
