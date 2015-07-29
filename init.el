@@ -4,6 +4,8 @@
 ;; 1. https://github.com/purcell/emacs.d.git
 ;; 2. https://github.com/bbatsov/prelude.git
 
+(when (version<= emacs-version "24")
+  (error "Emacs版本太低,该配置需要Emacs 24.3或是更高版本"))
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -11,9 +13,7 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(when (version<= emacs-version "24")
-  (error "Emacs版本太低,该配置需要Emacs 24.3或是更高版本"))
-
+;; manage packages with el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -22,16 +22,18 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 (add-to-list 'el-get-recipe-path "~/.emacs.d/recipes")
-;; (el-get 'sync '(yasnippet))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "site-lisp" user-emacs-directory))
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 
+;; base plugins
+(el-get-bundle lazy-set-key (require 'lazy-set-key))
+
 (require 'zcodes-elpa)
+(require 'zcodes-themes)
 (require 'zcodes-gui-frame)
 (require 'zcodes-fonts)
-(require 'zcodes-themes)
 
 (require 'zcodes-misc)
 (require 'zcodes-edit)

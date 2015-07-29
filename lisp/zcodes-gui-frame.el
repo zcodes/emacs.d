@@ -10,10 +10,17 @@
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 
-
 (if window-system
     (progn
       (add-to-list 'default-frame-alist '(width . 120))
       (add-to-list 'default-frame-alist '(height . 30))))
 
+;; switch frame with number
+(el-get-bundle window-number)
+(if (functionp 'window-number-mode)
+    (progn (window-number-mode 1)
+	   (window-number-meta-mode 1)
+	   (global-set-key (kbd "C-x o") 'window-number-switch)))
+		    
 (provide 'zcodes-gui-frame)
+

@@ -10,9 +10,18 @@
   (interactive)
   (ibuffer nil))
 
+(defun zcodes/speedbar ()
+  (interactive)
+  (if (and (functionp 'sr-speedbar-select-window)
+	   (sr-speedbar-window-exist-p (selected-window)))
+      (sr-speedbar-select-window)
+    (sr-speedbar-open)))
+
 ;; leader key binding
 (evil-leader/set-key
+  "e"  'eval-last-sexp
   "be" 'zcodes/ibuffer
+  "bb" 'sr-speedbar-toggle
   "f"  'ido-find-file)
 
 
