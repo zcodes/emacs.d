@@ -7,8 +7,6 @@
 (setq inhibit-startup-echo-area-message t)
 (setq initial-scratch-message ";; Enjoy hacking !\n;;\n\n")
 
-(tool-bar-mode 0)
-(scroll-bar-mode 0)
 
 (if window-system
     (progn

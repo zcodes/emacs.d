@@ -7,6 +7,10 @@
 (when (version<= emacs-version "24")
   (error "Emacs版本太低,该配置需要Emacs 24.3或是更高版本"))
 
+;; minalize gui frame at startup
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
@@ -59,6 +63,6 @@
 
 
 ;; Emacs Customizations
-(setq custom-file "~/.emacs-custom.el")
+(setq custom-file "~/.emacs.d/custom.el")
 (if (file-exists-p custom-file)
     (load custom-file))

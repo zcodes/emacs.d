@@ -1,0 +1,11 @@
+# name: postmeta 
+# --
+---
+layout: post
+title: $1
+date: `(zcodes/time-string)`
+categories: $2
+keywords: [$3]
+---
+
+
