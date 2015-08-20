@@ -1,14 +1,16 @@
 ;;;  使用vim模式的按键绑定, 让小拇指不再疼痛
 
-(require-package 'evil)
-(require-package 'evil-leader)
+(el-get-bundle 'evil)
+(el-get-bundle 'evil-leader)
 
 (evil-mode 1)
 (global-evil-leader-mode)
 
 (defun zcodes/ibuffer ()
   (interactive)
-  (ibuffer nil))
+  (if (get-buffer "*Ibuffer*")
+      (switch-to-buffer "*Ibuffer*")
+    (ibuffer nil)))
 
 (defun zcodes/speedbar ()
   (interactive)

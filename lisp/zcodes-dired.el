@@ -1,5 +1,5 @@
-(require-package 'dired+)
-(require-package 'dired-sort)
+(el-get-bundle dired+)
+(el-get-bundle dired-sort)
 
 (setq-default diredp-hide-details-initially-flag nil
 	      dired-dwim-target t)

@@ -15,7 +15,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;; (package-initialize)
 
 ;; manage packages with el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
@@ -32,18 +32,20 @@
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
 
 ;; base plugins
-(el-get-bundle lazy-set-key (require 'lazy-set-key))
+;; (el-get-bundle lazy-set-key (require 'lazy-set-key))
 
-(require 'zcodes-elpa)
+;; (require 'zcodes-elpa)
+;; 
+;; vim 模拟
+(require 'zcodes-evil)
+
+;; 常用插件设置
 (require 'zcodes-themes)
 (require 'zcodes-gui-frame)
 (require 'zcodes-fonts)
-
 (require 'zcodes-misc)
 (require 'zcodes-edit)
 (require 'zcodes-files)
-
-;; 常用插件设置
 (require 'zcodes-ibuffer)
 (require 'zcodes-dired)
 (require 'zcodes-speedbar)
@@ -57,9 +59,9 @@
 (require 'zcodes-web)
 (require 'zcodes-css)
 (require 'zcodes-yaml)
+(require 'zcodes-lua)
 
-;; vim 模拟
-(require 'zcodes-evil)
+(require 'zcodes-neotree)
 
 
 ;; Emacs Customizations

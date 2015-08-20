@@ -1,4 +1,4 @@
-(require-package 'ibuffer-vc)
+(el-get-bundle ibuffer-vc)
 
 (with-eval-after-load 'ibuffer
   (define-ibuffer-column size-h

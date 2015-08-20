@@ -1,5 +1,4 @@
-(require-package 'php-mode)
-
+(el-get-bundle php-mode)
 (add-hook 'php-mode-hook
 	  '(lambda ()
 	     (progn

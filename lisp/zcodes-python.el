@@ -1,3 +1,3 @@
-(require-package 'pony-mode)
+(el-get-bundle pony-mode)
 
 (provide 'zcodes-python)

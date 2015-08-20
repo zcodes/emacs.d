@@ -36,4 +36,10 @@
 ;; turn on automatic bracket insertion by pairs.
 (electric-pair-mode 1)
 
+;; 禁止光标进入 minibuffer
+(setq minibuffer-prompt-properties
+      '(readonly t
+		 point-entered minibuffer-avoid-prompt
+		 face minibuffer-prompt))
+
 (provide 'zcodes-edit)

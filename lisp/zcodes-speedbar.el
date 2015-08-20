@@ -14,13 +14,12 @@
       ;; speedbar-file-key-map nil
       )
 
-;; (lazy-set-key
-;;  '(
-;;    ("j" . speedbar-next)
-;;    ("k" . speedbar-prev)
-;;    ("C-m" . speedbar-expand-line))
-;;  speedbar-mode-map)
 
-(define-key speedbar-file-key-map "\C-m" 'speedbar-expand-line)
-(define-key speedbar-buffers-key-map "\C-m" 'speedbar-expand-line)
+;;(require 'speedbar)
+;;(evil-define-key 'normal speedbar-file-key-map
+;;  (kbd "RET") 'speedbar-expand-line
+;;  )
+
+;(define-key speedbar-file-key-map "\C-m" 'speedbar-expand-line)
+;(define-key speedbar-buffers-key-map "\C-m" 'speedbar-expand-line)
 (provide 'zcodes-speedbar)

@@ -1,4 +1,5 @@
 ;;; Emacs包管理
+;;; OLD and not used-- change to `el-get`
 
 (require 'package)
 
