@@ -35,4 +35,7 @@
   "d" 'neotree-delete-node
   )
 
+(evil-leader/set-key
+  "bf" 'neotree-toggle)
+
 (provide 'zcodes-neotree)

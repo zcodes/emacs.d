@@ -30,4 +30,7 @@
 
 (add-hook 'org-mode-hook 'zcodes/custom-org-table-font)
 
+;;  org-export
+(setq org-html-doctype "html5")
+
 (provide 'zcodes-org)

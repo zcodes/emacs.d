@@ -17,7 +17,7 @@
 			(font-spec :family "Microsoft Yahei"
 				   :size 10.0)))
   (progn
-    (set-frame-font "Source Code Pro 10")
+    (set-frame-font "Source Code Pro Medium 10")
     (set-fontset-font t 'han
 		      (font-spec :family "Source Han Sans SC Normal"
 				 :size 11.0))))
