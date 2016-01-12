@@ -11,7 +11,7 @@
 (with-eval-after-load 'ibuffer
   (require 'ibuffer-vc))
 
-;; 重新绑定ibuffer中上下移动和刷新
+;; rebind keys for ibuffer.
 (add-hook 'ibuffer-mode-hook
 	  '(lambda ()
 	     (progn

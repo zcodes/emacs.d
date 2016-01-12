@@ -1,5 +1,3 @@
-;;;  使用vim模式的按键绑定, 让小拇指不再疼痛
-
 (el-get-bundle 'evil)
 (el-get-bundle 'evil-leader)
 
@@ -20,11 +18,13 @@
     (sr-speedbar-open)))
 
 ;; leader key binding
+(evil-leader/set-leader "SPC")
 (evil-leader/set-key
   "e"  'eval-last-sexp
+  "f"  'ido-find-file
+  "w"  'window-number-switch
   "be" 'zcodes/ibuffer
   "bb" 'sr-speedbar-toggle
-  "f"  'ido-find-file)
-
+  )
 
 (provide 'zcodes-evil)
