@@ -1,5 +1,5 @@
-(el-get-bundle 'evil)
-(el-get-bundle 'evil-leader)
+(el-get-bundle evil)
+(el-get-bundle evil-leader)
 
 (evil-mode 1)
 (global-evil-leader-mode)
@@ -23,6 +23,7 @@
   "e"  'eval-last-sexp
   "f"  'ido-find-file
   "w"  'window-number-switch
+  "x"  'helm-M-x
   "be" 'zcodes/ibuffer
   "bb" 'sr-speedbar-toggle
   )
