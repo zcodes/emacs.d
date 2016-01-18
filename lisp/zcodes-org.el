@@ -1,4 +1,8 @@
-(el-get-bundle org)
+;; TODO: el-get the official org-mode
+;; (add-to-list 'package-archives
+;;              '("org" . "http://orgmode.org/elpa/"))
+
+;; (el-get-bundle elpa:org)
 
 ;; keybinds for org-mode 
 (global-set-key "\C-cl" 'org-store-link)
