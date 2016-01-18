@@ -1,8 +1,9 @@
 (el-get-bundle 'evil)
 (el-get-bundle 'evil-leader)
 
-(evil-mode 1)
+;; Enable `evil-leader-mode' first
 (global-evil-leader-mode)
+(evil-mode 1)
 
 (defun zcodes/ibuffer ()
   (interactive)
@@ -26,5 +27,10 @@
   "be" 'zcodes/ibuffer
   "bb" 'sr-speedbar-toggle
   )
+
+;; Disable `evil-leader-mode' in `Info-mode' by removing `Info-mode'
+;; from `evil-motion-state-modes'
+(setq evil-motion-state-modes (delq 'Info-mode evil-motion-state-modes))
+(add-to-list 'evil-emacs-state-modes 'Info-mode)
 
 (provide 'zcodes-evil)
