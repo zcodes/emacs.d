@@ -1,5 +1,5 @@
-(when (version<= emacs-version "24.5")
-  (error "this config require emacs 24.5 at leaset."))
+(when (version<= emacs-version "24.4")
+  (error "this config require emacs 24.4 at leaset."))
 
 ;; minalize gui frame at startup
 (tool-bar-mode 0)
