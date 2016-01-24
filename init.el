@@ -1,6 +1,9 @@
 (when (version<= emacs-version "24.5")
   (error "this config require emacs 24.5 at leaset."))
 
+(when (file-exists-p "~/.local/bin")
+  (setenv "PATH" (concat (expand-file-name "~/.local/bin") ":" (getenv "PATH"))))
+
 ;; minalize gui frame at startup
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
@@ -42,6 +45,7 @@
 ;;
 (require 'zcodes-neotree)
 (require 'zcodes-powerline)
+;;(require 'zcodes-helm)
 
 ;; local customizations
 (setq custom-file "~/.emacs.d/custom.el")

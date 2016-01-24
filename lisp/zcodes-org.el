@@ -6,7 +6,7 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
-(setq org-log-done 'note)
+(setq org-log-done t)
 
 ;; 单独设置org-table的字体, 保证有中文是表格对齐
 (create-fontset-from-fontset-spec

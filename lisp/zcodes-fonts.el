@@ -20,6 +20,6 @@
     (set-frame-font "Fira Mono 11")
     (set-fontset-font t 'han
 		      (font-spec :family "Source Han Sans SC Normal"
-				 :size 11.0))))
+				 :size 11.0)))) 
 
 (provide 'zcodes-fonts)
