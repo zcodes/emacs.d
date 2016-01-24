@@ -1,5 +1,5 @@
-(el-get-bundle 'evil)
-(el-get-bundle 'evil-leader)
+(el-get-bundle evil)
+(el-get-bundle evil-leader)
 
 ;; Enable `evil-leader-mode' first
 (global-evil-leader-mode)
