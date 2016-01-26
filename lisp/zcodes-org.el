@@ -13,19 +13,14 @@
 (setq org-log-done t)
 
 ;; 单独设置org-table的字体, 保证有中文是表格对齐
-(create-fontset-from-fontset-spec
- "-outline-PT Mono-normal-normal-normal-mono-13-*-*-*-c-*-fontset-orgtable")
-
-(set-fontset-font "fontset-orgtable" 'han
-		  (font-spec
-		   :family "Source Han Sans SC"
-		   :size 12.0))
-
-(defun zcodes/custom-org-table-font ()
+(setq fontset-orgtable (create-fontset-from-ascii-font "Fira Mono Medium-14"))
+(set-fontset-font fontset-orgtable 'han
+		  (font-spec :family "Source Han Sans SC Medium"
+			     :size 16.5))
+(defun zcodes/org-table-font ()
   (set-face-attribute 'org-table nil
-		      :fontset "fontset-orgtable"))
-
-(add-hook 'org-mode-hook 'zcodes/custom-org-table-font)
+		      :fontset fontset-orgtable))
+(add-hook 'org-mode-hook 'zcodes/org-table-font)
 
 ;;  org-export
 (setq org-html-doctype "html5")

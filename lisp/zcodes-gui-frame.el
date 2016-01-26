@@ -1,9 +1,11 @@
 ;; suppress gui fetures
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
 (setq use-file-diglog nil)
 (setq use-dialog-box nil)
 (setq inhibit-startup-message t)
 (setq inhibit-startup-echo-area-message t)
-(setq initial-scratch-message ";; Enjoy hacking !\n;;\n\n")
+(setq initial-scratch-message ";;\n;; Enjoy hacking !\n;;\n\n")
 
 (if window-system
     (progn

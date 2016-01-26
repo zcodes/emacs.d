@@ -4,10 +4,6 @@
 (when (file-exists-p "~/.local/bin")
   (setenv "PATH" (concat (expand-file-name "~/.local/bin") ":" (getenv "PATH"))))
 
-;; minalize gui frame at startup
-(tool-bar-mode 0)
-(scroll-bar-mode 0)
-
 ;; manage packages with el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (unless (require 'el-get nil 'noerror)
@@ -18,10 +14,10 @@
     (eval-print-last-sexp)))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
+(add-to-list 'custom-theme-load-path
+	     (expand-file-name "themes" user-emacs-directory))
 
 (require 'zcodes-evil)
-(require 'zcodes-themes)
 (require 'zcodes-gui-frame)
 (require 'zcodes-fonts)
 (require 'zcodes-misc)
@@ -42,12 +38,15 @@
 (require 'zcodes-yaml)
 (require 'zcodes-lua)
 
-;;
+;; misc plugins
 (require 'zcodes-neotree)
 (require 'zcodes-powerline)
-;;(require 'zcodes-helm)
+
+;; Emacs theme
+(require 'zcodes-themes)
 
 ;; local customizations
 (setq custom-file "~/.emacs.d/custom.el")
 (if (file-exists-p custom-file)
     (load custom-file))
+
