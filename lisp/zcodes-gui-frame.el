@@ -13,7 +13,6 @@
       (add-to-list 'default-frame-alist '(height . 30))))
 
 ;; switch frame with number
-;; TODO: window number theme look.
 (el-get-bundle window-number)
 (when (functionp 'window-number-mode)
   (window-number-mode 1)
