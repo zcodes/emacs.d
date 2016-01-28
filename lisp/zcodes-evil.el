@@ -1,4 +1,4 @@
-(el-get-bundle evil)
+(el-get-bundle elpa:evil)
 (el-get-bundle evil-leader)
 
 ;; Enable `evil-leader-mode' first

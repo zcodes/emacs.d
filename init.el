@@ -17,6 +17,8 @@
 (add-to-list 'custom-theme-load-path
 	     (expand-file-name "themes" user-emacs-directory))
 
+(package-initialize)
+
 (require 'zcodes-evil)
 (require 'zcodes-gui-frame)
 (require 'zcodes-fonts)
