@@ -6,10 +6,11 @@
 
 ;; manage packages with el-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(setq el-get-git-install-url "https://github.com/zcodes/el-get.git")
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
+       "https://raw.githubusercontent.com/zcodes/el-get/master/el-get-install.el")
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
