@@ -26,6 +26,8 @@
   "w"  'window-number-switch
   "be" 'zcodes/ibuffer
   "bb" 'sr-speedbar-toggle
+  "bs" 'ido-switch-buffer
+  "d"  'ido-dired
   )
 
 ;; Disable `evil-leader-mode' in `Info-mode' by removing `Info-mode'
