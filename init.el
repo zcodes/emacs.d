@@ -1,3 +1,7 @@
+(setq debug-on-error t
+      debug-on-signal nil
+      debug-on-quit nil)
+
 (when (version<= emacs-version "24.4")
   (error "this config require emacs 24.4 at leaset."))
 
@@ -31,6 +35,13 @@
 (require 'zcodes-speedbar)
 (require 'zcodes-yasnippet)
 
+;; misc plugins
+(require 'zcodes-company)
+(require 'zcodes-ido)
+(require 'zcodes-neotree)
+(require 'zcodes-powerline)
+(require 'zcodes-projectile)
+
 ;; support for programming languages
 (require 'zcodes-php)
 (require 'zcodes-python)
@@ -41,10 +52,6 @@
 (require 'zcodes-yaml)
 (require 'zcodes-lua)
 
-;; misc plugins
-(require 'zcodes-neotree)
-(require 'zcodes-powerline)
-
 ;; Emacs theme
 (require 'zcodes-themes)
 
@@ -53,3 +60,4 @@
 (if (file-exists-p custom-file)
     (load custom-file))
 
+(put 'erase-buffer 'disabled nil)

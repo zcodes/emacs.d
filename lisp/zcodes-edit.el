@@ -10,9 +10,6 @@
 (global-set-key (kbd "C-x j") 'join-line)
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
-;; enable ido-mode
-(ido-mode t)
-
 ;; no cursor blinking
 (blink-cursor-mode 0)
 
