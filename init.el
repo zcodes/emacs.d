@@ -39,6 +39,14 @@
 (require 'zcodes-yasnippet)
 
 
+;; misc plugins
+(require 'zcodes-company)
+(require 'zcodes-ido)
+(require 'zcodes-neotree)
+(require 'zcodes-powerline)
+(require 'zcodes-projectile)
+
+;; support for programming languages
 (require 'zcodes-php)
 (require 'zcodes-python)
 (require 'zcodes-markdown)

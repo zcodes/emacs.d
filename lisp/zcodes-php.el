@@ -11,6 +11,10 @@
 
 
 (el-get-bundle php-mode)
+(el-get-bundle php-extras
+  :type github
+  :pkgname "arnested/php-extras")
+
 (add-hook 'php-mode-hook
 	  '(lambda ()
 	     (progn
