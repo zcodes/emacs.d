@@ -12,9 +12,6 @@
 (setq gc-cons-threshold 104857600)
 (setq package-enable-at-startup nil)
 
-;; TODO: put this somewhere
-(setq system-time-locale "C")
-
 
 ;; set up `load-paths'
 (dolist (path '("core" "lisp" "progmode" "plugins"))
