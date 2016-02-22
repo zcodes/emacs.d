@@ -1,5 +1,19 @@
+;;; core-evil.el --- Evil of Emacs !
+;;
+;; Copyright (c) 2016 zcodes
+;;
+;; Author: zcodes <zcodes@qq.com>
+;; URL: https://github.com/zcodes/emacs.d
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
+;; use elpa install evil for the lack of `hg' and `make' on Windows.
+(el-get-bundle elpa:goto-chg)
+(el-get-bundle elpa:undo-tree)
 (el-get-bundle elpa:evil)
-(el-get-bundle evil-leader)
+(el-get-bundle elpa:evil-leader)
 
 ;; Enable `evil-leader-mode' first
 (global-evil-leader-mode)
@@ -20,19 +34,25 @@
 
 ;; leader key binding
 (evil-leader/set-leader "SPC")
+
+;; global evil key settings
+(evil-leader/set-key
+  "f" 'ido-find-file)
+
+;; TODO: key settings for mode.
 (evil-leader/set-key
   "e"  'eval-last-sexp
-  "f"  'ido-find-file
-  "w"  'window-number-switch
   "be" 'zcodes/ibuffer
   "bb" 'sr-speedbar-toggle
   "bs" 'ido-switch-buffer
   "d"  'ido-dired
   )
 
-;; Disable `evil-leader-mode' in `Info-mode' by removing `Info-mode'
+;; disable `evil-leader-mode' in `Info-mode' by removing `Info-mode'
 ;; from `evil-motion-state-modes'
 (setq evil-motion-state-modes (delq 'Info-mode evil-motion-state-modes))
 (add-to-list 'evil-emacs-state-modes 'Info-mode)
 
-(provide 'zcodes-evil)
+(provide 'core-evil)
+
+;;; core-evil.el ends here.

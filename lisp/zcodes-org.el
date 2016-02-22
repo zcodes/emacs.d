@@ -1,3 +1,16 @@
+;;; zcodes-org.el --- Org-mode support.
+;;
+;; Copyright (c) 2016 zcodes
+;;
+;; Author: zcodes <zcodes@qq.com>
+;; URL: https://github.com/zcodes/emacs.d
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
+
+
 ;; TODO: el-get the official org-mode
 ;; (add-to-list 'package-archives
 ;;              '("org" . "http://orgmode.org/elpa/"))
@@ -17,6 +30,7 @@
 (set-fontset-font fontset-orgtable 'han
 		  (font-spec :family "思源黑体 Medium"
 			     :size 16.5))
+
 (defun zcodes/org-table-font ()
   (set-face-attribute 'org-table nil
 		      :fontset fontset-orgtable))
@@ -26,3 +40,5 @@
 (setq org-html-doctype "html5")
 
 (provide 'zcodes-org)
+
+;;; zcodes-org.el ends here.

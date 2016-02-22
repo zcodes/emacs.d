@@ -1,3 +1,15 @@
+;;; zcodes-web.el --- Web files editting support.
+;;
+;; Copyright (c) 2016 zcodes
+;;
+;; Author: zcodes <zcodes@qq.com>
+;; URL: https://github.com/zcodes/emacs.d
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
+
 (el-get-bundle web-mode)
 (el-get-bundle emmet-mode)
 (require 'web-mode)
@@ -33,3 +45,4 @@
 
 (provide 'zcodes-web)
  
+;;; zcodes-web.el ends here.

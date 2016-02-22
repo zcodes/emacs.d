@@ -1,3 +1,15 @@
+;;; zcodes-speedbar --- Emacs speedbar settings.
+;;
+;; Copyright (c) 2016 zcodes
+;;
+;; Author: zcodes <zcodes@qq.com>
+;; URL: https://github.com/zcodes/emacs.d
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
+
 ;; use speedbar without separated frame.
 (el-get-bundle sr-speedbar)
 
@@ -13,3 +25,5 @@
       )
 
 (provide 'zcodes-speedbar)
+
+;;; zcodes-speedbar.el ends here.

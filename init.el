@@ -1,26 +1,33 @@
-(when (version<= emacs-version "24.4")
-  (error "this config require emacs 24.4 at leaset."))
+;;; init.el --- Emacs configuration initialize file.
+;;
+;; Copyright (c) 2016 zcodes
+;;
+;; Author: zcodes <zcodes@qq.com>
+;; URL: https://github.com/zcodes/emacs.d
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
 
-(when (file-exists-p "~/.local/bin")
-  (setenv "PATH" (concat (expand-file-name "~/.local/bin") ":" (getenv "PATH"))))
+(setq gc-cons-threshold 104857600)
+(setq package-enable-at-startup nil)
 
-;; manage packages with el-get
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(setq el-get-git-install-url "https://github.com/zcodes/el-get.git")
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/zcodes/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
+;; TODO: put this somewhere
+(setq system-time-locale "C")
 
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-(add-to-list 'custom-theme-load-path
-	     (expand-file-name "themes" user-emacs-directory))
+
+;; set up `load-paths'
+(dolist (path '("core" "lisp" "progmode" "plugins"))
+  (add-to-list 'load-path (expand-file-name path user-emacs-directory)))
 
-(package-initialize)
+
+;; core settings for emacs
+(require 'core-system)
+(require 'core-el-get)
+(require 'core-libs)
+(require 'core-evil)
 
-(require 'zcodes-evil)
+
 (require 'zcodes-gui-frame)
 (require 'zcodes-fonts)
 (require 'zcodes-misc)
@@ -31,7 +38,7 @@
 (require 'zcodes-speedbar)
 (require 'zcodes-yasnippet)
 
-;; support for programming languages
+
 (require 'zcodes-php)
 (require 'zcodes-python)
 (require 'zcodes-markdown)
@@ -41,15 +48,22 @@
 (require 'zcodes-yaml)
 (require 'zcodes-lua)
 
-;; misc plugins
+
 (require 'zcodes-neotree)
 (require 'zcodes-powerline)
+(require 'zcodes-window-number)
 
 ;; Emacs theme
 (require 'zcodes-themes)
 
+
 ;; local customizations
 (setq custom-file "~/.emacs.d/custom.el")
 (if (file-exists-p custom-file)
     (load custom-file))
 
+
+(el-get 'sync)
+(package-initialize)
+
+;;; init.el ends here.

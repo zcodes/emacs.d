@@ -1,5 +1,6 @@
-# About
+# emacs.d
 
-My ~/.emacs.d
+Emacs configuration files.
+
 
 

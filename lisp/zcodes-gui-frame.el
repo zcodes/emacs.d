@@ -1,6 +1,21 @@
+;;; zcodes-gui-frame --- Emacs GUI settings.
+;;
+;; Copyright (c) 2016 zcodes
+;;
+;; Author: zcodes <zcodes@qq.com>
+;; URL: https://github.com/zcodes/emacs.d
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
 ;; suppress gui fetures
-(tool-bar-mode 0)
-(scroll-bar-mode 0)
+(when (fboundp 'tool-bar-mode)
+  (tool-bar-mode -1))
+
+(when (fboundp 'scroll-bar-mode)
+  (scroll-bar-mode -1))
+
 (setq use-file-diglog nil)
 (setq use-dialog-box nil)
 (setq inhibit-startup-message t)
@@ -28,3 +43,4 @@
 
 (provide 'zcodes-gui-frame)
 
+;;; zcodes-gui-frame.el ends here.

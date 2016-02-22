@@ -1,0 +1,16 @@
+#+TITLE: emacs.d docs
+#+AUTHOR: zcodes
+#+EMAIL: zcodes@qq.com
+#+STARTUP: indent
+
+* Core Features
+** el-Get
+** evil
+** ido
+** company and auto-complete
+** projectile
+** org-mode
+
+* Themes
+   
+* Language Support

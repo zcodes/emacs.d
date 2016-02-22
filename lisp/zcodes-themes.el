@@ -1,4 +1,18 @@
-(el-get-bundle zcodes/emacs-material-theme
+;;; zcodes-themes.el --- Emacs theme support.
+;;
+;; Copyright (c) 2016 zcodes
+;;
+;; Author: zcodes <zcodes@qq.com>
+;; URL: https://github.com/zcodes/emacs.d
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
+
+(el-get-bundle emacs-material-theme
+  :type github
+  :package "zcodes/emacs-material-theme"
   (add-to-list 'custom-theme-load-path default-directory)
   (load-theme 'material t))
 
@@ -15,3 +29,5 @@
   (powerline-reset))
 
 (provide 'zcodes-themes)
+
+;;; zcodes-themes.el ends here.

@@ -1,3 +1,15 @@
+;;; zcodes-php.el --- PHP mode settings.
+;;
+;; Copyright (c) 2016 zcodes
+;;
+;; Author: zcodes <zcodes@qq.com>
+;; URL: https://github.com/zcodes/emacs.d
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
+
 (el-get-bundle php-mode)
 (add-hook 'php-mode-hook
 	  '(lambda ()
@@ -8,3 +20,5 @@
 	       (local-set-key (kbd "C-,") 'php-show-arglist))))
 
 (provide 'zcodes-php)
+
+;;; zcodes-php.el ends here.

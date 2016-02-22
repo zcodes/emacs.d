@@ -1,5 +1,18 @@
-;; show line numbers
+;;; zcodes-edit.el --- Emacs editing settings.
+;;
+;; Copyright (c) 2016 zcodes
+;;
+;; Author: zcodes <zcodes@qq.com>
+;; URL: https://github.com/zcodes/emacs.d
+;;
+;; This file is not part of GNU Emacs.
+;;
+;;; License: GPLv3
+
+
 (global-linum-mode t)
+(global-hl-line-mode t)
+;; (hs-minor-mode)
 
 ;; parentheses match
 (show-paren-mode t)
@@ -17,10 +30,10 @@
 (blink-cursor-mode 0)
 
 ;; enable the disabled functions.
-(put 'narrow-to-region 'disable nil)
-(put 'narrow-to-page 'disable nil)
-(put 'narrow-to-defun 'disable nil)
-(put 'set-goal-column 'disable nil)
+(put 'narrow-to-region 'disabled nil)
+(put 'narrow-to-page 'disabled nil)
+(put 'narrow-to-defun 'disabled nil)
+(put 'set-goal-column 'disabled nil)
 
 ;; y-o-p
 (defalias 'yes-or-no-p 'y-or-n-p)
@@ -43,3 +56,5 @@
 		 face minibuffer-prompt))
 
 (provide 'zcodes-edit)
+
+;;; zcodes-edit.el ends here.
