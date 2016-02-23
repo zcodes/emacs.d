@@ -12,7 +12,7 @@
 
 (el-get-bundle emacs-material-theme
   :type github
-  :package "zcodes/emacs-material-theme"
+  :pkgname "zcodes/emacs-material-theme"
   (add-to-list 'custom-theme-load-path default-directory)
   (load-theme 'material t))
 
