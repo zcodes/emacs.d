@@ -9,9 +9,18 @@
 ;;
 ;;; License: GPLv3
 
+;; 
+(unless (fboundp 'with-eavl-after-load)
+  (defmacro with-eval-after-load (file &rest body)
+    "Execute BODY after FILE is loaded.
+FILE is normally a feature name, but it can alse be a file name,
+in case that file does not provide any feature."
+    (declare (indent defun))
+    `(eval-after-load ,file '(progn ,@body))))
+
 ;; a modern list library for Emacs.
 ;; https://github.com/magnars/dash.el  
-(el-get-bundle elpa:dash
+(el-get-bundle dash
   (eval-after-load "dash" '(dash-enable-font-lock))
   (require 'dash))
 

@@ -1,4 +1,4 @@
-;;; zcodes-neotree.el --- Vim like Neotree Plugin.
+ ;;; zcodes-neotree.el --- Vim like Neotree Plugin.
 ;;
 ;; Copyright (c) 2016 zcodes
 ;;
