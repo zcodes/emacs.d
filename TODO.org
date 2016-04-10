@@ -1,0 +1,8 @@
+#+title: todos
+#+startup: indent
+
+* TODO coffee-script support [0/1]
+
+Enable support for coffee script.
+
+** TODO coffee-mode
