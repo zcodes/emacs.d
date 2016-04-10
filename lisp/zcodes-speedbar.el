@@ -21,8 +21,7 @@
 
 (setq speedbar-use-images nil
       speedbar-show-unknown-files t
-      speedbar-update-flags nil
-      )
+      speedbar-update-flags nil)
 
 (provide 'zcodes-speedbar)
 

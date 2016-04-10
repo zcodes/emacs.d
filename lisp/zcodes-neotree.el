@@ -12,6 +12,8 @@
 
 (el-get-bundle emacs-neotree)
 
+(setq neo-theme 'ascii)
+
 (evil-define-key 'normal neotree-mode-map
   (kbd "RET") (neotree-make-executor
 		:file-fn 'neo-open-file
@@ -48,7 +50,9 @@
   )
 
 (evil-leader/set-key
-  "bf" 'neotree-toggle)
+  "nn" 'neotree
+  "nc" 'neotree-toggle)
+
 
 (provide 'zcodes-neotree)
 

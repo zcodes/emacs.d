@@ -14,16 +14,16 @@
 ;; Source Han Sans: https://github.com/adobe-fonts/source-han-sans 
 
 ;; common font settings
-(set-frame-font "Fira Mono Medium-14")
+(set-frame-font "Fira Mono Medium-12")
 (set-fontset-font t 'han
 		  (font-spec :family "思源黑体 Medium"
-			     :size 13.5))
+			     :size 12.0))
 
 ;; mode-line font
 (add-hook 'after-init-hook
 	  '(lambda ()
 	     (set-face-attribute 'mode-line nil
-				 :font "Fira Mono 11")))
+				 :font "Fira Mono 12")))
 
 (provide 'zcodes-fonts)
 

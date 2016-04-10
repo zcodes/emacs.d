@@ -39,14 +39,14 @@
 (evil-leader/set-key
   "f" 'ido-find-file)
 
-;; TODO: key settings for mode.
 (evil-leader/set-key
-  "e"  'eval-last-sexp
-  "be" 'zcodes/ibuffer
-  "bb" 'sr-speedbar-toggle
-  "bs" 'ido-switch-buffer
-  "d"  'ido-dired
-  )
+  "ee" 'eval-last-sexp)
+
+(evil-leader/set-key
+  "bl" 'zcodes/ibuffer
+  "bb" 'ido-switch-buffer
+  "bs" 'sr-speedbar-toggle
+  "bd"  'ido-dired)
 
 ;; disable `evil-leader-mode' in `Info-mode' by removing `Info-mode'
 ;; from `evil-motion-state-modes'

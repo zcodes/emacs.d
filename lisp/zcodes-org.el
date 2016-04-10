@@ -9,15 +9,11 @@
 ;;
 ;;; License: GPLv3
 
+;; org-8.3.4
+(add-to-list 'load-path "~/.emacs.d/vendor/org-mode/lisp")
+(add-to-list 'load-path "~/.emacs.d/vendor/org-mode/contrib/lisp")
 
-
-;; TODO: el-get the official org-mode
-;; (add-to-list 'package-archives
-;;              '("org" . "http://orgmode.org/elpa/"))
-
-;; (el-get-bundle elpa:org)
-
-;; keybinds for org-mode
+;; global keybinds for org-mode
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
@@ -36,6 +32,11 @@
     (set-face-attribute 'org-table nil
 			:fontset fontset-orgtable))
   (add-hook 'org-mode-hook 'zcodes/org-table-font))
+
+(add-hook 'org-mode-hook
+	  '(lambda ()
+	     (evil-leader/set-key-for-mode 'org-mode
+	       "'" 'org-edit-src-exit)))
 
 ;;  org-export
 (setq org-html-doctype "html5")

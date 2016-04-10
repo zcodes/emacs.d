@@ -19,8 +19,9 @@
 (setq show-paren-style "parenthesis")
 
 ;; editing key bindings
-(global-set-key (kbd "C-.") 'set-mark-command)
-(global-set-key (kbd "C-x j") 'join-line)
+;; use evil key instead n:v and n:J
+;; (global-set-key (kbd "C-.") 'set-mark-command)
+;; (global-set-key (kbd "C-x j") 'join-line)
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
 ;; no cursor blinking
