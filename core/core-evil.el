@@ -12,7 +12,12 @@
 ;; use elpa install evil for the lack of `hg' and `make' on Windows.
 (el-get-bundle elpa:goto-chg)
 (el-get-bundle elpa:undo-tree)
-(el-get-bundle elpa:evil)
+
+;; evil 
+(add-to-list 'load-path "~/.emacs.d/vendor/evil")
+(require 'evil)
+(evil-mode 1)
+
 (el-get-bundle elpa:evil-leader)
 
 ;; Enable `evil-leader-mode' first
