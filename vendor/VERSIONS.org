@@ -4,3 +4,4 @@
 * Package List
 + org-mode :: 8.3.4
 + evil :: 41aa7c5943d9
++ evil-leader :: 0.4.3

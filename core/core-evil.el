@@ -18,7 +18,9 @@
 (require 'evil)
 (evil-mode 1)
 
-(el-get-bundle elpa:evil-leader)
+(add-to-list 'load-path "~/.emacs.d/vendor/evil-leader")
+(require 'evil-leader)
+(global-evil-leader-mode)
 
 ;; Enable `evil-leader-mode' first
 (global-evil-leader-mode)
