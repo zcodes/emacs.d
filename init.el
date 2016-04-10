@@ -53,6 +53,7 @@
 (require 'zcodes-css)
 (require 'zcodes-yaml)
 (require 'zcodes-lua)
+(require 'zcodes-slime)
 
 
 (require 'zcodes-neotree)
