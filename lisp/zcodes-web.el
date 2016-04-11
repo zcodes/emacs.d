@@ -10,7 +10,10 @@
 ;;; License: GPLv3
 
 
-(el-get-bundle web-mode)
+(el-get-bundle web-mode
+  :type github
+  :pkgname "zcodes/web-mode")
+
 (el-get-bundle emmet-mode)
 (require 'web-mode)
 
