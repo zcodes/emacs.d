@@ -54,6 +54,7 @@
 (require 'zcodes-yaml)
 (require 'zcodes-lua)
 (require 'zcodes-slime)
+(require 'zcodes-javascript)
 
 
 (require 'zcodes-neotree)

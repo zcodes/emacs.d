@@ -54,7 +54,7 @@
 
   "c" 'neotree-change-root
   "+" 'neotree-create-node
-  "ma" 'netoree-create-node
+  "ma" 'neotree-create-node
   "mm" 'neotree-rename-node
   "md" 'neotree-delete-node
   )

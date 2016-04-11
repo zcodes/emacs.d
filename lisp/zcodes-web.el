@@ -30,10 +30,10 @@
 	  (lambda ()
 	    ;; (electric-pair-mode 0)
 	    (setq indent-tabs-mode nil
-		  web-mode-markup-indent-offset 4
-		  web-mode-attr-indent-offset 4
-		  web-mode-css-indent-offset 4
-		  web-mode-code-indent-offset 4
+		  web-mode-markup-indent-offset 2
+		  web-mode-attr-indent-offset 2
+		  web-mode-css-indent-offset 2
+		  web-mode-code-indent-offset 2
 		  web-mode-enable-auto-pairing nil)))
 
 (add-hook 'web-mode-hook 'emmet-mode)
