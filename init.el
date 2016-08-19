@@ -60,6 +60,7 @@
 (require 'zcodes-neotree)
 (require 'zcodes-powerline)
 (require 'zcodes-window-number)
+(require 'zcodes-pangu-spacing)
 
 ;; Emacs theme
 (require 'zcodes-themes)
