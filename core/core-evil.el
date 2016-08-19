@@ -10,17 +10,10 @@
 ;;; License: GPLv3
 
 ;; use elpa install evil for the lack of `hg' and `make' on Windows.
+(el-get-bundle elpa:evil)
 (el-get-bundle elpa:goto-chg)
 (el-get-bundle elpa:undo-tree)
-
-;; evil 
-(add-to-list 'load-path "~/.emacs.d/vendor/evil")
-(require 'evil)
-(evil-mode 1)
-
-(add-to-list 'load-path "~/.emacs.d/vendor/evil-leader")
-(require 'evil-leader)
-(global-evil-leader-mode)
+(el-get-bundle elpa:evil-leader)
 
 ;; Enable `evil-leader-mode' first
 (global-evil-leader-mode)
