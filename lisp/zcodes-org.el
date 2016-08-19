@@ -9,9 +9,8 @@
 ;;
 ;;; License: GPLv3
 
-;; org-8.3.4
-(add-to-list 'load-path "~/.emacs.d/vendor/org-mode/lisp")
-(add-to-list 'load-path "~/.emacs.d/vendor/org-mode/contrib/lisp")
+(el-get-bundle 'org-mode)
+(el-get-bundle 'org-bullets)
 
 ;; global keybinds for org-mode
 (global-set-key "\C-cl" 'org-store-link)
@@ -45,6 +44,11 @@
 
 ;;  org-export
 (setq org-html-doctype "html5")
+
+;; enable org-bullets
+(add-hook 'org-mode-hook
+	  (lambda ()
+	    (org-bullets-mode 1)))
 
 (provide 'zcodes-org)
 
