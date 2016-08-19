@@ -12,4 +12,9 @@
 (el-get-bundle pangu-spacing)
 (global-pangu-spacing-mode 1)
 
+(dolist (mode '(org-mode-hook markdown-mode-hook))
+  (add-hook mode
+	    '(lambda ()
+	       (set (make-local-variable 'pangu-spacing-real-insert-separtor) t))))
+
 (provide 'zcodes-pangu-spacing)
