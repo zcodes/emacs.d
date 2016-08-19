@@ -23,14 +23,19 @@
 
 ;; 单独设置org-table的字体, 保证有中文是表格对齐
 (when (window-system)
-  (setq fontset-orgtable (create-fontset-from-ascii-font "Fira Mono Medium-14"))
-  (set-fontset-font fontset-orgtable 'han
-		    (font-spec :family "思源黑体 Medium"
-			       :size 16.5))
+  (setq zcodes/orgtable-face-font "Consolas 11")
+  (setq zcodes/fontset-orgtable
+	(create-fontset-from-ascii-font zcodes/orgtable-face-font))
+  (dolist (charset '(han symbol cjk-misc))
+    (set-fontset-font zcodes/fontset-orgtable charset
+		      (font-spec :family "Microsoft Yahei"
+				 :size 12.0)))
 
   (defun zcodes/org-table-font ()
     (set-face-attribute 'org-table nil
-			:fontset fontset-orgtable))
+			:font zcodes/orgtable-face-font
+			:fontset zcodes/fontset-orgtable))
+  ;; and hook for org-mode
   (add-hook 'org-mode-hook 'zcodes/org-table-font))
 
 (add-hook 'org-mode-hook

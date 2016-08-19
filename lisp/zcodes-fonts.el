@@ -14,10 +14,15 @@
 ;; Source Han Sans: https://github.com/adobe-fonts/source-han-sans 
 
 ;; common font settings
-(set-frame-font "Fira Mono Medium-12")
-(set-fontset-font t 'han
-		  (font-spec :family "思源黑体 Medium"
-			     :size 12.0))
+(set-frame-font "Fira Mono Medium-11")
+(if (zcodes/is-windows)
+    (setq zcodes/chinese-font "Microsoft Yahei")
+  (setq zcodes/chinese-font "思源黑体 Medium"))
+
+(dolist (charset '(han symbol cjk-misc))
+  (set-fontset-font t charset
+		    (font-spec :family zcodes/chinese-font
+			       :size 12.0)))
 
 ;; mode-line font
 (add-hook 'after-init-hook
