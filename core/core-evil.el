@@ -37,7 +37,8 @@
 
 ;; global evil key settings
 (evil-leader/set-key
-  "f" 'ido-find-file)
+  "f" 'ido-find-file
+  "s" 'save-buffer)
 
 (evil-leader/set-key
   "ee" 'eval-last-sexp)

@@ -19,6 +19,7 @@
     (setq zcodes/chinese-font "Microsoft Yahei")
   (setq zcodes/chinese-font "思源黑体 Medium"))
 
+;; 单独设置中文字体
 (dolist (charset '(han symbol cjk-misc))
   (set-fontset-font t charset
 		    (font-spec :family zcodes/chinese-font
@@ -28,7 +29,7 @@
 (add-hook 'after-init-hook
 	  '(lambda ()
 	     (set-face-attribute 'mode-line nil
-				 :font "Fira Mono 12")))
+				 :font "Fira Mono Medium-11")))
 
 (provide 'zcodes-fonts)
 
