@@ -11,6 +11,11 @@
 
 
 (el-get-bundle markdown-mode)
+
+;; `visual-fill-column' is required by `writeroom-mode'
+(el-get-bundle visual-fill-column)
+(el-get-bundle writeroom-mode)
+
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 
