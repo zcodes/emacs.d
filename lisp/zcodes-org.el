@@ -19,29 +19,32 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 
 (setq org-log-done t)
+;; custom it in ~/.emacs.d/custom.el
+;; (setq org-directory "~/orgs")
+;; default org notes file
+(defun zcodes/org-file-path (file)
+  (concat org-directory file))
 
-;; 单独设置org-table的字体, 保证有中文是表格对齐
-(when (window-system)
-  (setq zcodes/orgtable-face-font "Consolas 11")
-  (setq zcodes/fontset-orgtable
-	(create-fontset-from-ascii-font zcodes/orgtable-face-font))
-  (dolist (charset '(han symbol cjk-misc))
-    (set-fontset-font zcodes/fontset-orgtable charset
-		      (font-spec :family "Microsoft Yahei"
-				 :size 12.0)))
+(after-load custom-file
+  (progn
+    (message org-directory)
+    (message (zcodes/org-file-path "/journal.org"))
+    (setq org-default-notes-file
+	  (zcodes/org-file-path "/notes.org"))
+    (setq org-capture-templates
+	  `(("t" "todo" entry (file ,(zcodes/org-file-path "/todo.org"))
+	     "* TODO %?\n%U\n" :clock-resume t)
+	    ("n" "note" entry (file "")
+	     "* %? :NOTE:\n%U\n" :clock-resume t)
+	    ("j" "journal" entry (file+datetree ,(zcodes/org-file-path "/journal.org"))
+	     "* %?\nEntered on %<[%H:%M:%S]>\n %i\n" :clock-resume t)
+	    ))))
 
-  (defun zcodes/org-table-font ()
-    (set-face-attribute 'org-table nil
-			:font zcodes/orgtable-face-font
-			:fontset zcodes/fontset-orgtable))
-  ;; and hook for org-mode
-  (add-hook 'org-mode-hook 'zcodes/org-table-font))
 
 (add-hook 'org-mode-hook
 	  '(lambda ()
 	     (evil-leader/set-key-for-mode 'org-mode
 	       "'" 'org-edit-src-exit)))
-
 ;;  org-export
 (setq org-html-doctype "html5")
 
@@ -50,6 +53,25 @@
 	  (lambda ()
 	    (org-bullets-mode 1)))
 
-(provide 'zcodes-org)
+;; org table font settings is comment here for example.
+;; custom setting it in your ~/.emacs.d/custom.el
+;;
+;; 单独设置org-table的字体, 保证有中文是表格对齐
+;; (when (window-system)
+;;   (setq zcodes/orgtable-face-font "Consolas 11")
+;;   (setq zcodes/fontset-orgtable
+;; 	(create-fontset-from-ascii-font zcodes/orgtable-face-font))
+;;   (dolist (charset '(han symbol cjk-misc))
+;;     (set-fontset-font zcodes/fontset-orgtable charset
+;; 		      (font-spec :family "Microsoft Yahei"
+;; 				 :size 12.0)))
 
+;;   (defun zcodes/org-table-font ()
+;;     (set-face-attribute 'org-table nil
+;; 			:font zcodes/orgtable-face-font
+;; 			:fontset zcodes/fontset-orgtable))
+;;   ;; and hook for org-mode
+;;   (add-hook 'org-mode-hook 'zcodes/org-table-font))
+
+(provide 'zcodes-org)
 ;;; zcodes-org.el ends here.

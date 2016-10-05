@@ -19,6 +19,7 @@
 	       (expand-file-name path user-emacs-directory)))
 
 
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 ;; core settings for emacs
 (require 'core-system)
 (require 'core-el-get)
@@ -66,9 +67,8 @@
 (require 'zcodes-themes)
 
 
-;; local customizations
-(setq custom-file "~/.emacs.d/custom.el")
-(if (file-exists-p custom-file)
+;; load customizations
+(when (file-exists-p custom-file)
     (load custom-file))
 
 
