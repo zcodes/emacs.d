@@ -18,35 +18,37 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
-(setq org-log-done t)
-;; custom it in ~/.emacs.d/custom.el
-;; (setq org-directory "~/orgs")
-;; default org notes file
+(setq org-log-done t
+      org-hide-emphasis-markers t
+      org-catch-invisible-edits 'show
+      org-export-coding-system 'utf-8
+      org-html-validation-link nil
+      org-tags-column 80
+      org-html-doctype "html5")
+
+;; the default value of `org-directory' is "~/org" and you can change
+;; it in "~/.emacs.d/custom.el"
 (defun zcodes/org-file-path (file)
+  "concat FILE with `org-directory'"
   (concat org-directory file))
 
 (after-load custom-file
   (progn
-    (message org-directory)
-    (message (zcodes/org-file-path "/journal.org"))
     (setq org-default-notes-file
 	  (zcodes/org-file-path "/notes.org"))
     (setq org-capture-templates
 	  `(("t" "todo" entry (file ,(zcodes/org-file-path "/todo.org"))
-	     "* TODO %?\n%U\n" :clock-resume t)
+	     "* TODO %?\n  %U\n" :clock-resume t)
 	    ("n" "note" entry (file "")
-	     "* %? :NOTE:\n%U\n" :clock-resume t)
+	     "* %? :NOTE:\n  %U\n" :clock-resume t)
 	    ("j" "journal" entry (file+datetree ,(zcodes/org-file-path "/journal.org"))
-	     "* %?\nEntered on %<[%H:%M:%S]>\n %i\n" :clock-resume t)
+	     "* %?\n  Entered on %<[%H:%M:%S]>\n %i\n" :clock-resume t)
 	    ))))
-
 
 (add-hook 'org-mode-hook
 	  '(lambda ()
 	     (evil-leader/set-key-for-mode 'org-mode
 	       "'" 'org-edit-src-exit)))
-;;  org-export
-(setq org-html-doctype "html5")
 
 ;; enable org-bullets
 (add-hook 'org-mode-hook
