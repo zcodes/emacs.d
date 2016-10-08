@@ -38,11 +38,11 @@
 	  (zcodes/org-file-path "/notes.org"))
     (setq org-capture-templates
 	  `(("t" "todo" entry (file ,(zcodes/org-file-path "/todo.org"))
-	     "* TODO %?\n  %U\n" :clock-resume t)
+	     "* TODO %?\n%U\n" :clock-resume t)
 	    ("n" "note" entry (file "")
-	     "* %? :NOTE:\n  %U\n" :clock-resume t)
+	     "* %? :NOTE:\n%U\n" :clock-resume t)
 	    ("j" "journal" entry (file+datetree ,(zcodes/org-file-path "/journal.org"))
-	     "* %?\n  Entered on %<[%H:%M:%S]>\n %i\n" :clock-resume t)
+	     "* %?\nEntered on %<[%H:%M:%S]>\n %i\n" :clock-resume t)
 	    ))))
 
 (add-hook 'org-mode-hook
