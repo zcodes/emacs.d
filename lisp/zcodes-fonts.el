@@ -16,23 +16,26 @@
 ;; font settings is comment here for example, custom set it in
 ;; ~/.emacs.d/custom.el
 ;;
-;; common font settings
-;; (set-frame-font "Fira Mono Medium-11")
-;; (if (zcodes/is-windows)
-;;     (setq zcodes/chinese-font "Microsoft Yahei")
-;;   (setq zcodes/chinese-font "思源黑体 Medium"))
-
-;; ;; 单独设置中文字体
-;; (dolist (charset '(han symbol cjk-misc))
-;;   (set-fontset-font t charset
-;; 		    (font-spec :family zcodes/chinese-font
-;; 			       :size 12.0)))
-
 ;; ;; mode-line font
 ;; (add-hook 'after-init-hook
 ;; 	  '(lambda ()
 ;; 	     (set-face-attribute 'mode-line nil
 ;; 				 :font "Fira Mono Medium-11")))
+
+(defun zcodes/set-english-font (fontname)
+  "set up english or ascii character fonts."
+  (set-frame-font fontname))
+
+(defun zcodes/set-chinese-font (family size)
+  "set up chinese font"
+  (dolist (charset '(han symbol cjk-misc))
+    (set-fontset-font t charset
+		      (font-spec :family family
+				 :size size))))
+
+;; demo
+;; (zcodes/set-english-font "Consolas 14")
+;; (zcodes/set-chinese-font "微软雅黑" 14.0)
 
 (provide 'zcodes-fonts)
 
