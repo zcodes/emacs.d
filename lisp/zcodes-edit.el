@@ -10,7 +10,9 @@
 ;;; License: GPLv3
 
 
-(global-linum-mode t)
+
+(el-get-bundle 'nlinum)
+(global-nlinum-mode t)
 (global-hl-line-mode t)
 ;; (hs-minor-mode)
 
@@ -39,7 +41,7 @@
 ;; use sapce, no tabs
 (setq indent-tabs-mode nil)
 
-;; smooth scroll with mouse wheel. 
+;; smooth scroll with mouse wheel.
 (setq mouse-wheel-scroll-amount '(2 ((shift) . 2))
       mouse-wheel-progressive-speed nil
       mouse-wheel-follow-mouse 't)
