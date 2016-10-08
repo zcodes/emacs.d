@@ -32,7 +32,7 @@
   "concat FILE with `org-directory'"
   (concat org-directory file))
 
-(after-load custom-file
+(after-load "custom.el"
   (progn
     (setq org-default-notes-file
 	  (zcodes/org-file-path "/notes.org"))

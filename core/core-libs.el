@@ -9,8 +9,8 @@
 ;;
 ;;; License: GPLv3
 
-(if (fboundp 'with-eavl-after-load)
-    (defalias 'after-load 'with-eavl-after-load)
+(if (fboundp 'with-eval-after-load)
+    (defalias 'after-load 'with-eval-after-load)
   (defmacro after-load (feature &rest body)
     "After FEATURE is loaded, evaluate BODY"
     (declare (indent defun))

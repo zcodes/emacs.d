@@ -14,7 +14,7 @@
 
 
 ;; set up `load-paths'
-(dolist (path '("core" "progmodes" "plugins"))
+(dolist (path '("core" "lisp"))
   (add-to-list 'load-path
 	       (expand-file-name path user-emacs-directory)))
 
