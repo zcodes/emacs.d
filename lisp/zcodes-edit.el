@@ -9,11 +9,10 @@
 ;;
 ;;; License: GPLv3
 
-
-
 (el-get-bundle 'nlinum)
 (global-nlinum-mode t)
-(global-hl-line-mode t)
+(if (zcodes/has-gui)
+    (global-hl-line-mode t))
 ;; (hs-minor-mode)
 
 ;; parentheses match

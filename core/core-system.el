@@ -18,6 +18,9 @@
   "Check if using `GNU/Linux'."
   (string-equal system-type "gnu/linux"))
 
+(defun zcodes/has-gui ()
+  window-system)
+
 (defun zcodes/system-info ()
   "Print system information."
   (interactive)
