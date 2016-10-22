@@ -26,11 +26,12 @@
   "set up english or ascii character fonts."
   (set-frame-font fontname))
 
-(defun zcodes/set-chinese-font (family size)
+(defun zcodes/set-chinese-font (family size &optional weight)
   "set up chinese font"
   (dolist (charset '(han symbol cjk-misc))
     (set-fontset-font t charset
 		      (font-spec :family family
+				 :weight (or weight 'normal)
 				 :size size))))
 
 ;; demo
