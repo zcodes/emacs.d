@@ -19,6 +19,7 @@
   (string-equal system-type "gnu/linux"))
 
 (defun zcodes/has-gui ()
+  "check if has gui or not"
   window-system)
 
 (defun zcodes/system-info ()
@@ -32,5 +33,4 @@
 		   evil-version)))
 
 (provide 'core-system)
-
 ;;; core-system.el ends here.

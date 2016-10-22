@@ -22,10 +22,9 @@
 (setq inhibit-startup-echo-area-message t)
 (setq initial-scratch-message ";;\n;; Enjoy hacking !\n;;\n\n")
 
-(if window-system
-    (progn
-      (add-to-list 'default-frame-alist '(width . 120))
-      (add-to-list 'default-frame-alist '(height . 30))))
+(when window-system
+  (add-to-list 'default-frame-alist '(width . 120))
+  (add-to-list 'default-frame-alist '(height . 30)))
 
 ;; switch frame with number
 (el-get-bundle zcodes/emacs-window-number
@@ -42,5 +41,4 @@
   (window-number-meta-mode 1))
 
 (provide 'zcodes-gui-frame)
-
 ;;; zcodes-gui-frame.el ends here.

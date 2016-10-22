@@ -15,5 +15,4 @@
 (setq powerline-default-separator 'box)
 
 (provide 'zcodes-powerline)
-
 ;;; zcodes-powerline.el ends here.

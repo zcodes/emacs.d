@@ -10,10 +10,8 @@
 ;;; License: GPLv3
 
 
-
 (el-get-bundle company-mode)
 (add-hook 'after-init-hook 'global-company-mode)
 
 (provide 'zcodes-company)
-
 ;;; zcodes-company.el ends here.

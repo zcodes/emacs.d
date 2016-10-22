@@ -9,6 +9,7 @@
 ;;
 ;;; License: GPLv3
 
+
 (el-get-bundle coffee-mode)
 (el-get-bundle js2-mode)
 (el-get-bundle js2-refactor)
@@ -24,3 +25,4 @@
       js2-basic-offset 2)
 
 (provide 'zcodes-javascript)
+;;; zcodes-javascript.el ends here.

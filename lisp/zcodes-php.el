@@ -24,5 +24,4 @@
 	       (local-set-key (kbd "C-,") 'php-show-arglist))))
 
 (provide 'zcodes-php)
-
 ;;; zcodes-php.el ends here.

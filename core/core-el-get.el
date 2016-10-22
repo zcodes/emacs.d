@@ -27,5 +27,4 @@
 (add-to-list 'el-get-recipe-path "~/.emacs.d/recipes")
 
 (provide 'core-el-get)
-
 ;;; core-el-get.el ends here.

@@ -39,5 +39,4 @@
 ;; (zcodes/set-chinese-font "微软雅黑" 14.0)
 
 (provide 'zcodes-fonts)
-
 ;;; zcodes-fonts.el ends here.

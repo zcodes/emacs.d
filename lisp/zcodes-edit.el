@@ -11,18 +11,17 @@
 
 (el-get-bundle 'nlinum)
 (global-nlinum-mode t)
-(if (zcodes/has-gui)
-    (global-hl-line-mode t))
-;; (hs-minor-mode)
+
+;; TODO enable `global-hl-line-mode' when emacs support color theme in
+;; console.
+(when window-system
+  (global-hl-line-mode t))
 
 ;; parentheses match
 (show-paren-mode t)
 (setq show-paren-style "parenthesis")
 
 ;; editing key bindings
-;; use evil key instead n:v and n:J
-;; (global-set-key (kbd "C-.") 'set-mark-command)
-;; (global-set-key (kbd "C-x j") 'join-line)
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
 ;; no cursor blinking
@@ -55,5 +54,4 @@
 		 face minibuffer-prompt))
 
 (provide 'zcodes-edit)
-
 ;;; zcodes-edit.el ends here.

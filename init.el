@@ -73,5 +73,4 @@
 
 (el-get 'sync)
 (package-initialize)
-
 ;;; init.el ends here.

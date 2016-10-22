@@ -63,3 +63,4 @@
 (setq ibuffer-filter-group-name-face 'font-lock-doc-face)
 
 (provide 'zcodes-ibuffer)
+;;; zcodes-ibuffer.el ends here.

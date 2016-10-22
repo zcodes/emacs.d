@@ -15,6 +15,8 @@
 (el-get-bundle elpa:undo-tree)
 (el-get-bundle elpa:evil-leader)
 
+;; TODO: evil key groups
+
 ;; Enable `evil-leader-mode' first
 (global-evil-leader-mode)
 (evil-mode 1)
@@ -55,5 +57,4 @@
 (add-to-list 'evil-emacs-state-modes 'Info-mode)
 
 (provide 'core-evil)
-
 ;;; core-evil.el ends here.

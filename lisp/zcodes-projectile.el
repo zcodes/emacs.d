@@ -19,5 +19,4 @@
   "pf" 'projectile-find-file)
 
 (provide 'zcodes-projectile)
-
 ;;; zcodes-projectile.el ends here.

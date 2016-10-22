@@ -18,5 +18,4 @@
 (add-hook 'js2-mode-hook 'rainbow-mode)
 
 (provide 'zcodes-css)
-
 ;;; zcodes-css.el ends here.
