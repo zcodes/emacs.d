@@ -18,6 +18,10 @@
   "Check if using `GNU/Linux'."
   (string-equal system-type "gnu/linux"))
 
+(defun zcodes/has-gui ()
+  "check if has gui or not"
+  window-system)
+
 (defun zcodes/system-info ()
   "Print system information."
   (interactive)
@@ -29,5 +33,4 @@
 		   evil-version)))
 
 (provide 'core-system)
-
 ;;; core-system.el ends here.

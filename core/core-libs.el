@@ -31,5 +31,4 @@
 ;; (el-get-bundle elpa:header2)
 
 (provide 'core-libs)
-
 ;;; core-libs.el ends herek.

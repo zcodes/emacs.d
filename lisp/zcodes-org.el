@@ -47,8 +47,7 @@
 	    ("n" "note" entry (file "")
 	     "* %? :NOTE:\n%U\n" :clock-resume t)
 	    ("j" "journal" entry (file+datetree ,(zcodes/org-file-path "/journal.org"))
-	     "* %?\nEntered on %<[%H:%M:%S]>\n %i\n" :clock-resume t)
-	    ))))
+	     "* %?\nEntered on %<[%H:%M:%S]>\n %i\n" :clock-resume t)))))
 
 (add-hook 'org-mode-hook
 	  '(lambda ()

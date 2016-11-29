@@ -18,5 +18,4 @@
 (setq ido-use-faces nil)
 
 (provide 'zcodes-ido)
-
 ;;; zcodes-ido.el ends here.

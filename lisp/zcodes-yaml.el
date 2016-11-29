@@ -15,5 +15,4 @@
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 (provide 'zcodes-yaml)
-
 ;;; zcodes-yaml.el ends here.

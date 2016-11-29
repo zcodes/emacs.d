@@ -29,5 +29,4 @@
   (powerline-reset))
 
 (provide 'zcodes-themes)
-
 ;;; zcodes-themes.el ends here.

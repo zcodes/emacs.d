@@ -24,5 +24,4 @@
   (setq dired-recursive-deletes 'top))
 
 (provide 'zcodes-dired)
-
 ;;; zcodes-dired.el ends here.

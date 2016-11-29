@@ -13,5 +13,4 @@
 (el-get-bundle lua-mode)
 
 (provide 'zcodes-lua)
-
 ;;; zcodes-lua.el ends here.

@@ -9,6 +9,7 @@
 ;;
 ;;; License: GPLv3
 
+
 (el-get-bundle pangu-spacing)
 (global-pangu-spacing-mode 1)
 
@@ -18,3 +19,4 @@
 	       (set (make-local-variable 'pangu-spacing-real-insert-separtor) t))))
 
 (provide 'zcodes-pangu-spacing)
+;;; zcodes-pangu-spacing.el ends here.

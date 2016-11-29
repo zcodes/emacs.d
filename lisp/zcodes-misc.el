@@ -15,10 +15,9 @@
 	  (lambda ()
 	    (font-lock-add-keywords
 	     nil
-	     '(("\\<\\(FIXME\\|TODO\\|BUG\\|NOTES\\):"
+	     '(("\\<\\(FIXME\\|TODO\\|BUG\\|NOTES\\):?"
 		1
 		font-lock-warning-face t)))))
 
 (provide 'zcodes-misc)
-
 ;;; zcodes-misc.el ends here.

@@ -56,8 +56,7 @@
   "+" 'neotree-create-node
   "ma" 'neotree-create-node
   "mm" 'neotree-rename-node
-  "md" 'neotree-delete-node
-  )
+  "md" 'neotree-delete-node)
 
 (evil-leader/set-key
   "nn" 'neotree
@@ -73,5 +72,4 @@
 
 
 (provide 'zcodes-neotree)
-
 ;;; zcodes-neotree.el ends here.

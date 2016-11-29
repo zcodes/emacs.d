@@ -13,5 +13,4 @@
   (yas-global-mode 1))
 
 (provide 'zcodes-yasnippet)
-
 ;;; zcodes-yasnippet.el ends here.

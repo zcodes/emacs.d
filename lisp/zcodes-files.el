@@ -17,6 +17,4 @@
 (prefer-coding-system 'utf-8-unix)
 
 (provide 'zcodes-files)
-
-
 ;;; zcodes-files.el ends here.

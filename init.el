@@ -44,6 +44,9 @@
 (require 'zcodes-neotree)
 (require 'zcodes-powerline)
 (require 'zcodes-projectile)
+(require 'zcodes-window-number)
+(require 'zcodes-pangu-spacing)
+
 
 ;; support for programming languages
 (require 'zcodes-php)
@@ -58,12 +61,7 @@
 (require 'zcodes-javascript)
 (require 'zcodes-lisp)
 (require 'zcodes-graphviz)
-
 
-(require 'zcodes-neotree)
-(require 'zcodes-powerline)
-(require 'zcodes-window-number)
-(require 'zcodes-pangu-spacing)
 
 ;; Emacs theme
 (require 'zcodes-themes)
@@ -76,5 +74,4 @@
 
 (el-get 'sync)
 (package-initialize)
-
 ;;; init.el ends here.

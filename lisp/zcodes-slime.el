@@ -30,7 +30,5 @@
 		  (expand-file-name
 		   "vendor/slime/doc" user-emacs-directory))))
 
-
 (provide 'zcodes-slime)
-
 ;;; zcodes-slime.el ends here.

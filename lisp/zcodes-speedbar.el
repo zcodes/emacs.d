@@ -24,5 +24,4 @@
       speedbar-update-flags nil)
 
 (provide 'zcodes-speedbar)
-
 ;;; zcodes-speedbar.el ends here.
