@@ -1,0 +1,10 @@
+# name: jmeta
+# --
+---
+layout: post
+title: $1
+date: `(format-time-string "%Y-%m-%d %H:%I:%S" (current-time) t)`
+category: $2
+tags:
+- $3
+---
