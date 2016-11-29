@@ -12,6 +12,11 @@
 (el-get-bundle 'org-mode)
 (el-get-bundle 'org-bullets)
 
+;; org-bullets list
+(setq org-bullets-bullet-list
+      ;; '("※" "●" "⬣" "⬟" "■" "▶")
+      '("※" "○" "⬡" "⬠" "□" "▷" "⊛" "⊕" "⊖"))
+
 ;; global keybinds for org-mode
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
