@@ -57,6 +57,7 @@
 (require 'zcodes-slime)
 (require 'zcodes-javascript)
 (require 'zcodes-lisp)
+(require 'zcodes-graphviz)
 
 
 (require 'zcodes-neotree)
