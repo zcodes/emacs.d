@@ -1,0 +1,9 @@
+#+STARTUP: indent
+
+* .emacs.d
+
+Emacs 的配置文件
+
+* slack 分支
+
+slack 分支是一个独立的分支。
