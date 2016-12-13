@@ -22,3 +22,5 @@
 (when window-system
   (add-to-list 'default-frame-alist '(width . 120))
   (add-to-list 'default-frame-alist '(height . 30)))
+
+(prefer-coding-system 'utf-8-unix)
