@@ -1,0 +1,15 @@
+*~
+*.elc
+/elpa
+/eshell
+/ido.last
+/auto-save-list
+/el-get
+/.org-id-locations
+/custom.el
+/url
+/image-dired
+/projectile*
+/bookmarks
+/network-security.data
+
