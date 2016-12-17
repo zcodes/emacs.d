@@ -1,4 +1,7 @@
-(package-initialize)
+;;; init.el --- Emacs configures
+
+(setq gc-cons-threshold 104857600)
+(setq package-enable-at-startup nil)
 
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
@@ -8,7 +11,7 @@
 
 (setq use-file-dialog nil
       use-dialog-box nil
-      inhibit-startup-message t
+      inhibit-startup-screen t
       inhibit-startup-echo-area-message t
       initial-scratch-message ";;\n;; Enjoy hacking ...\n;;\n\n")
 
@@ -25,4 +28,12 @@
 
 (prefer-coding-system 'utf-8-unix)
 
+(require 'ido)
+(setq ido-enable-flex-matching t)
+(ido-mode t)
+
 (load-theme 'wombat)
+
+(package-initialize)
+
+(put 'erase-buffer 'disabled nil)
